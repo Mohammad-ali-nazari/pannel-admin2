@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>پنل ادمین</title>
+  <link rel="stylesheet" href="build/tailwind.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+
+<body>
+  
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.site-header');
+      if (window.scrollY > 50) {
+        header.classList.add('shrink');
+      } else {
+        header.classList.remove('shrink');
+      }
+    });
+  </script>
+
+  <header class="site-header">
+    <div class="logo">لوگوی سایت</div>
+    <div class="user-info">
+      <img src="profile.jpg" alt="User" class="user-pic">
+      <span class="username">نام کاربر</span>
+    </div>
+  </header>
+
+  <!-- Layout Wrapper -->
+  <div class="layout">
+    <!-- منوی سمت راست -->
+    <nav id="sideMenu">
+      <ul>
+        <li><a href="index.html">داشبورد</a></li>
+        <li><a href="blog-list.html">لیست بلاگ‌ها</a></li>
+        <li><a href="message.html">پیام‌های دریافتی</a></li>
+        <li><a href="user-list.html">لیست کاربران</a></li>
+        <li><a href="admin-setting.html" class="active">تنظیمات ادمین</a></li>
+      </ul>
+    </nav>
+
+    <!-- داشبورد -->
+    <main class="dashboard">
+      <div id="dashboard-summary" class="grid grid-cols-2 gap-4 mb-8">
+        <div class="bg-gray-800 text-white rounded-lg p-6 shadow">
+          <h3 class="text-lg font-semibold">تعداد کل پیام‌ها</h3>
+          <p class="text-2xl font-bold" id="totalMessages">0</p>
+        </div>
+        <div class="bg-gray-800 text-white rounded-lg p-6 shadow">
+          <h3 class="text-lg font-semibold">پیام‌های خوانده‌نشده</h3>
+          <p class="text-2xl font-bold" id="unreadMessages">0</p>
+        </div>
+        <div class="bg-gray-800 text-white rounded-lg p-6 shadow">
+          <h3 class="text-lg font-semibold">تعداد بلاگ‌ها</h3>
+          <p class="text-2xl font-bold" id="totalBlogs">0</p>
+        </div>
+        <div class="bg-gray-800 text-white rounded-lg p-6 shadow">
+          <h3 class="text-lg font-semibold">آخرین فعالیت‌ها</h3>
+          <ul class="mt-2 text-sm list-disc list-inside" id="latestActivities">
+            <li>ورود موفق مدیر</li>
+            <li>ارسال پیام جدید</li>
+            <li>ایجاد بلاگ جدید</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- نمودارها -->
+      <div id="charts">
+        <div class="chart-box">
+          <h2>نمودار بازدیدها</h2>
+          <canvas id="visitsChart"></canvas>
+        </div>
+        <div class="chart-box">
+          <h2>نمودار فروش</h2>
+          <canvas id="salesChart"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-box pie-chart">
+        <h2>نمودار دایره‌ای کاربران</h2>
+        <canvas id="usersPieChart"></canvas>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // مقادیر نمونه - در پروژه واقعی باید از سرور دریافت شوند
+    document.getElementById('totalMessages').innerText = 25;
+    document.getElementById('unreadMessages').innerText = 7;
+    document.getElementById('totalBlogs').innerText = 12;
+  </script>
+
+  <script src="js/script.js"></script>
+
+    
+</body>
+</html>

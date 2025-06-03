@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Received Messages</title>
+  <link rel="stylesheet" href="message.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Received Messages</h1>
+
+    <!-- Search and Filter -->
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search by sender name..." />
+      <select id="statusFilter">
+        <option value="all">All Messages</option>
+        <option value="unread">Unread Only</option>
+        <option value="read">Read Only</option>
+      </select>
+    </div>
+
+    <!-- Messages List -->
+    <div class="messages-list" id="messagesList">
+      <div class="message unread" data-message="This is an unread message from Ali Rezaei.">
+        <div class="sender">Ali Rezaei</div>
+        <div class="date">1402/05/10</div>
+        <div class="status">Unread</div>
+        <button class="view-btn">View Message</button>
+      </div>
+
+      <div class="message read" data-message="This is a read message from Mina Ahmadi.">
+        <div class="sender">Mina Ahmadi</div>
+        <div class="date">1402/05/08</div>
+        <div class="status">Read</div>
+        <button class="view-btn">View Message</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="messageModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Message</h2>
+      <p id="modalMessageText"></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

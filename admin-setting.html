@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تنظیمات ادمین</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/admin-settings.css">
+</head>
+<body class="theme-light">
+
+  <main class="container">
+    <h1 class="page-title">تنظیمات ادمین</h1>
+
+    <!-- فرم تغییر رمز عبور -->
+    <section class="section-box">
+      <form id="passwordForm">
+        <fieldset>
+          <legend class="section-title">تغییر رمز عبور</legend>
+
+          <label for="currentPassword">رمز فعلی</label>
+          <input type="password" id="currentPassword" placeholder="رمز فعلی را وارد کنید" required>
+
+          <label for="newPassword">رمز جدید</label>
+          <input type="password" id="newPassword" placeholder="رمز جدید را وارد کنید" required>
+
+          <button type="submit">ذخیره رمز عبور</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- فرم اطلاعات پروفایل -->
+    <section class="section-box">
+      <form id="profileForm">
+        <fieldset>
+          <legend class="section-title">ویرایش اطلاعات پروفایل</legend>
+
+          <label for="name">نام کامل</label>
+          <input type="text" id="name" placeholder="مثلاً: علی رضایی" required>
+
+          <label for="email">ایمیل</label>
+          <input type="email" id="email" placeholder="مثلاً: ali@example.com" required>
+
+          <button type="submit">ذخیره اطلاعات</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- انتخاب تم سایت -->
+    <section class="section-box">
+      <fieldset>
+        <legend class="section-title">تغییر تم سایت</legend>
+
+        <label for="themeSelector">انتخاب تم</label>
+        <select id="themeSelector">
+          <option value="light">روشن</option>
+          <option value="dark">تاریک</option>
+          <option value="blue">آبی</option>
+        </select>
+      </fieldset>
+    </section>
+  </main>
+
+  <script src="js/admin-settings.js"></script>
+</body>
+</html>

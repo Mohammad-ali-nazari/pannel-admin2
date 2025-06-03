@@ -1,0 +1,582 @@
+/* Body and HTML */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff; /* ← سفید خالص */
+  color: #212121;
+  overflow: auto;
+}
+
+
+/* Site Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #e3f2fd, #ffffff);
+  color: #212121;
+  padding: 10px 30px;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1976d2;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  flex-direction: row-reverse;
+  height: calc(100vh - 60px);
+  padding-top: 60px;
+}
+
+/* Side Menu */
+#sideMenu {
+  width: 230px;
+  background-color: #f4f7f9;
+  height: calc(100vh - 60px);
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 60px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.05);
+  z-index: 999;
+  overflow-y: auto;
+  border-left: 1px solid #d6e2ea;
+  border-top-left-radius: 12px;
+}
+
+#sideMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sideMenu ul li {
+  margin: 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+/* #sideMenu ul li:last-child {
+  border-bottom: none;
+} */
+
+#sideMenu ul li a {
+  color: #1976d2;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+#sideMenu ul li a:hover{
+  background-color: #d0e7ff;
+  color: #0d47a1;
+}
+
+/* Main Content */
+main.dashboard {
+  flex: 1;
+  padding: 30px;
+  margin-top: 60px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  padding-right: 20px;
+  margin-right: 220px;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #bbdefb;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.topbar .user-info img,
+.topbar .logo img {
+  height: 40px;
+  border-radius: 50%;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.user-info .user-pic {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #1976d2;
+}
+.username {
+  font-weight: 600;
+  color: #212121;
+  font-size: 16px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  background-color: #e0e0e0;
+  padding: 10px;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.navbar a {
+  color: #1976d2;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #0d47a1;
+}
+
+/* Charts Container */
+#charts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+/* Chart Box */
+.chart-box {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.chart-box h2 {
+  color: #1976d2;
+  margin-bottom: 10px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+.pie-chart {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.chart-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.chart-container h3 {
+  margin-bottom: 10px;
+}
+
+/* Blog List - Modern Grid */
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 20px;
+}
+
+.blog-item {
+  background-color: #0f172a; /* رنگ تیره (مثلاً خاکستری مایل به آبی) */
+  color: white; /* رنگ نوشته‌ها سفید */
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+.blog-item h2 {
+  color: #1976d2;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.blog-item p {
+  color: #444;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Buttons */
+.Btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.Btn:hover {
+  background-color: #1976d2;
+}
+
+.Btn .svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
+button.submit-btn {
+  background-color: #2196f3;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.submit-btn:hover {
+  background-color: #1976d2;
+}
+
+.Btn:hover svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: .3s;
+}
+
+/* Delete Button - Tooltip Style */
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: .3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  width: 50px;
+  transition-duration: .3s;
+  transform: translateY(60%);
+}
+
+.button::before {
+  position: absolute;
+  top: -20px;
+  content: "Delete";
+  color: white;
+  transition-duration: .3s;
+  font-size: 2px;
+}
+
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(30px);
+  transition-duration: .3s;
+}
+
+/* Edit Blog Page */
+form {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #90caf9;
+}
+
+input[type="text"], textarea, input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: white;
+}
+
+textarea {
+  height: 150px;
+}
+
+#blogImagePreview {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#blogTitle, #blogDescription {
+  padding: 10px;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  min-height: 40px;
+}
+
+#blogTitle {
+  margin-bottom: 15px;
+}
+/* From Uiverse.io by ZAKARIAE48CHELLE */ 
+.Btn-edit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+  height: 40px;
+  border: none;
+  padding: 0px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px black;
+  transition-duration: 0.3s;
+}
+
+.svg {
+  width: 13px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  fill: white;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover {
+  color: transparent;
+}
+
+.Btn:hover svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: 0.3s;
+}
+
+.Btn:active {
+  transform: translate(3px, 3px);
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 0px white;
+}
+.Btn-edit {
+  text-decoration: none;  
+  color: white; 
+}
+/* From Uiverse.io by andrew-demchenk0 */ 
+.button-add {
+ margin-right: 1070px;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #34974d;
+  background-color: #3aa856;
+}
+
+.button-add, .button__icon-add, .button__text-add {
+  transition: all 0.3s;
+}
+
+.button-add .button__text-add {
+  transform: translateX(30px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.button-add .button__icon-add {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #34974d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-add .svg {
+  width: 30px;
+  stroke: #fff;
+}
+
+.button-add:hover {
+  background: #34974d;
+}
+
+.button-add:hover .button__text-add {
+  color: transparent;
+}
+
+.button-add:hover .button__icon-add {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button-add:active .button__icon-add {
+  background-color: #2e8644;
+}
+
+.button-add:active {
+  border: 1px solid #2e8644;
+}
+.link-add{
+  text-decoration: none;
+
+}
+
+/* افکت هاور قوی‌تر برای کارت‌های داشبورد */
+#dashboard-summary > div {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+  transform-origin: center;
+}
+
+#dashboard-summary > div:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+}
+@keyframes fadeInUpDelayed {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* اعمال انیمیشن به هر کارت با تاخیر متفاوت */
+#dashboard-summary > div:nth-child(1) {
+  animation: fadeInUpDelayed 0.6s ease forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+#dashboard-summary > div:nth-child(2) {
+  animation: fadeInUpDelayed 0.6s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+#dashboard-summary > div:nth-child(3) {
+  animation: fadeInUpDelayed 0.6s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+#dashboard-summary > div:nth-child(4) {
+  animation: fadeInUpDelayed 0.6s ease forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+.site-header.shrink {
+  height: 45px;
+  padding: 5px 20px;
+  transition: all 0.3s ease;
+}
+
+.site-header .logo,
+.site-header .user-info {
+  transition: all 0.3s ease;
+}
+
+.site-header.shrink .logo {
+  font-size: 0.9em;
+}
+
+.site-header.shrink .user-pic {
+  height: 32px;
+  transition: all 0.3s ease;
+}
+
+.site-header.shrink .username {
+  font-size: 0.85em;
+}
+
+
+
+
+
+
+
+
+

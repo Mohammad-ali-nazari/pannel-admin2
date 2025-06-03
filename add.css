@@ -1,0 +1,101 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 1.2em 1.5em 1em 1.5em;
+    background-color: #171717;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .form:hover {
+    transform: scale(1.03);
+    border: 1px solid black;
+  }
+  
+  #heading {
+    text-align: center;
+    margin: 1.5em 0 1em 0;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  
+  .field {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    border-radius: 20px;
+    padding: 0.45em 0.8em;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5 5 5);
+  }
+  
+  .input-icon {
+    height: 1.1em;
+    width: 1.1em;
+    fill: white;
+  }
+  
+  .input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
+    font-size: 0.9em;
+    padding: 0.15em 0;
+  }
+  
+  textarea.input-field {
+    resize: vertical;
+    min-height: 60px;
+  }
+  
+  #previewImage {
+    max-width: 100%;
+    margin-top: 8px;
+    border-radius: 10px;
+    display: none;
+  }
+  
+  .form .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+  }
+  
+  .button1 {
+    padding: 0.4em 1em;
+    border-radius: 5px;
+    border: none;
+    background-color: #252525;
+    color: white;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button1:hover {
+    background-color: black;
+  }
+  
+  .success-message {
+    text-align: center;
+    color: #3dbd3d;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 0.95em;
+  }
+  
+  a {
+    color: #90caf9;
+    text-decoration: underline;
+    font-size: 0.9em;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }
+  

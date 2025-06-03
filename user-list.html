@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لیست کاربران</title>
+  <link rel="stylesheet" href="user.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>لیست کاربران</h1>
+
+    <!-- فرم افزودن کاربر جدید -->
+    <form id="addUserForm" class="add-user-form">
+      <input type="text" placeholder="نام" required />
+      <input type="email" placeholder="ایمیل" required />
+      <select required>
+        <option value="">نقش را انتخاب کنید</option>
+        <option value="ادمین">ادمین</option>
+        <option value="نویسنده">نویسنده</option>
+        <option value="مشاور">مشاور</option>
+      </select>
+      <label class="switch-label">
+        فعال
+        <input type="checkbox" checked />
+      </label>
+      <button type="submit">افزودن</button>
+    </form>
+
+    <!-- جدول کاربران -->
+    <div class="user-table">
+      <div class="table-header">
+        <div class="col name">نام</div>
+        <div class="col email">ایمیل</div>
+        <div class="col role">نقش</div>
+        <div class="col status">وضعیت</div>
+        <div class="col actions">عملیات</div>
+      </div>
+
+      <div class="user-row">
+        <div class="col name">مریم رضایی</div>
+        <div class="col email">maryam123@gmail.com</div>
+        <div class="col role">نویسنده</div>
+        <div class="col status"><input type="checkbox" checked /></div>
+        <div class="col actions">
+          <button class="edit-btn">ویرایش</button>
+          <button class="delete-btn" title="حذف کاربر">🗑</button>
+        </div>
+      </div>
+
+      <div class="user-row">
+        <div class="col name">حمید احمدی</div>
+        <div class="col email">hamid.ahmadi@mail.com</div>
+        <div class="col role">مشاور</div>
+        <div class="col status"><input type="checkbox" /></div>
+        <div class="col actions">
+          <button class="edit-btn">ویرایش</button>
+          <button class="delete-btn" title="حذف کاربر">🗑</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal ویرایش کاربر -->
+  <div id="editUserModal" class="modal">
+    <div class="modal-content">
+      <h2>ویرایش کاربر</h2>
+      <form id="editUserForm">
+        <label>نام:</label>
+        <input type="text" id="editName" required />
+
+        <label>ایمیل / شناسه:</label>
+        <input type="email" id="editEmail" required />
+
+        <label>نقش:</label>
+        <select id="editRole" required>
+          <option value="ادمین">ادمین</option>
+          <option value="نویسنده">نویسنده</option>
+          <option value="مشاور">مشاور</option>
+        </select>
+
+        <label>
+          فعال:
+          <input type="checkbox" id="editActive" />
+        </label>
+
+        <div class="modal-actions">
+          <button type="submit" class="save-btn">ذخیره</button>
+          <button type="button" id="cancelEdit" class="cancel-btn">انصراف</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/user-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    margin: 0;
+    padding: 30px;
+    direction: rtl;
+    background-color: #f3f4f6;
+    color: #111827;
+  }
+  
+  .page-title {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .section-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Theme classes */
+  body.theme-dark {
+    background-color: #1f2937;
+    color: white;
+  }
+  
+  body.theme-dark .section-box {
+    background-color: #374151;
+    color: white;
+  }
+  
+  body.theme-blue {
+    background-color: #1e3a8a;
+    color: white;
+  }
+  
+  body.theme-blue .section-box {
+    background-color: #3b82f6;
+    color: white;
+  }
+  

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Blog</title>
+  <link rel="stylesheet" href="add.css">
+
+</head>
+<body>
+  <form class="form" id="addBlogForm">
+    <p id="heading">Add New Blog</p>
+
+    <div class="field">
+        <input type="text" id="blogTitle" name="blogTitle" placeholder="Blog Title" class="input-field" required>
+      </div>
+      
+
+    <div class="field">
+      
+        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
+      </svg>
+      <textarea id="blogDescription" name="blogDescription" placeholder="Description" class="input-field" required></textarea>
+    </div>
+
+    <div class="field">
+      <input type="file" id="blogImage" name="blogImage" accept="image/*" class="input-field">
+    </div>
+
+    <img id="previewImage" alt="Image Preview" style="max-width: 100%; margin-top: 10px; border-radius: 10px;" />
+
+    <div class="btn">
+      <button type="submit" class="button1">Submit</button>
+    </div>
+
+    <div class="success-message" id="successMessage" style="display:none;">✅ Blog added successfully!</div>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="blog-list.html" style="color: #90caf9; text-decoration: underline;">Back to Blog List</a>
+    </div>
+  </form>
+  <script src="/js/script.js"></script>
+</body>
+</html>

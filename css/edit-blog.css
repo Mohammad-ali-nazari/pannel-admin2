@@ -1,0 +1,157 @@
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Vazir", sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    direction: rtl;
+  }
+  
+
+  
+  /* Main content */
+  .main-content {
+    max-width: 900px;
+    margin: 20px auto; /* margin auto برای مرکز چین کردن کل بلاک */
+    padding: 30px 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    color: #333;
+    direction: rtl;
+    text-align: center; /* متن‌ها وسط چین */
+  }
+  
+  .main-content h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #1e40af;
+  }
+  
+  /* Form groups */
+  .form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 1.1rem;
+  }
+  
+  /* تصویر بلاگ */
+  .image-group img#blogImage {
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+  }
+  
+  /* input فایل */
+  #imageInput {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    max-width: 280px;
+  }
+  
+  /* divهای ویرایش‌پذیر */
+  .editable-input {
+    border: 1.8px solid #cbd5e1; /* خاکستری روشن */
+    padding: 10px 14px;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    font-size: 1rem;
+    min-height: 38px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  .editable-input:focus {
+    border-color: #3b82f6; /* آبی */
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(59,130,246,0.3);
+    caret-color: #3b82f6;
+    cursor: text;
+  }
+  
+  /* برای توضیحات (متن طولانی‌تر) */
+  .editable-textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  /* دکمه ذخیره */
+  .submit-btn {
+    background-color: #1e40af;
+    color: #fff;
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 6px 15px rgba(30,64,175,0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    align-self: flex-start;
+  }
+  
+  .submit-btn:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 8px 20px rgba(59,130,246,0.6);
+  }
+  
+  /* ریسپانسیو */
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      height: auto;
+      box-shadow: none;
+      padding: 20px 15px;
+    }
+  
+    .main-content {
+      margin: 15px;
+      padding: 25px 20px;
+      max-width: 100%;
+    }
+  
+    .image-group img#blogImage,
+    #imageInput {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .image-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* وسط چین کردن عمودی و افقی */
+    margin-bottom: 25px;
+  }
+  #imageInput {
+    max-width: 280px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
